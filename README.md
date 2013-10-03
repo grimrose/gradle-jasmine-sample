@@ -7,7 +7,7 @@ Gradleを利用してPhantomJS + Jasmineのテストを実行できるサンプ�
 
 まず、GradleからPhantomJSを使えるようにします。
 
-既にPhantomJSを別Directoryにて設定している場合は、*build.gradle* 以下のように設定することで利用できるようになります。		
+既にPhantomJSを別Directoryにて設定している場合は、以下のように *build.gradle*に設定することで利用できるようになります。		
 
 ```groovy
 obake {
@@ -27,7 +27,7 @@ $ gradle preparePhantomJS
 $ gradle phantomJSAgent
 ```
 
-結果として、以下のように表示されれば、PhantomJSは実行されています。
+結果として、以下のように表示されれば、PhantomJSは利用可能です。
 
 ```bash
 using PhantomJS version 1.9.2
@@ -96,7 +96,7 @@ Jenkinsと連携する際は、TAP形式でも出来ますが、JUnit形式のxm
 
 以下のコードをSpecRunner.htmlに追加します。
 
-*"${buildDir}/test-js-results"* にxmlファイルを出力して欲しいので、**JUnitXmlReporter** の第一引数に渡します。
+*"${buildDir}/test-js-results"* にxmlファイルを出力して欲しいので、 **JUnitXmlReporter**の第一引数に渡します。
 
 ```javascript
 jasmineEnv.addReporter(new jasmine.JUnitXmlReporter('build/test-js-results'));
